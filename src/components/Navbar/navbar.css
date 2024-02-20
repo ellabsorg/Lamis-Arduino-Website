@@ -5,15 +5,15 @@
   justify-content: center;
   align-items: center;
   background-color: #00979d;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-container {
   max-width: 1368px;
-  min-width: 100%;
+  min-width: 1280px;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
 }
 
 .first-level {
@@ -57,7 +57,7 @@
 }
 
 .link:hover {
-  background-color: #00787c;
+  background-color: #005c5f;
 }
 
 .first-level-left .link {
@@ -68,7 +68,7 @@
 }
 
 .first-level-right .search {
-  background-color: #00787c;
+  background-color: #005c5f7e;
   padding: 5px 10px;
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@
 }
 
 .first-level-right .search:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
 }
 
 /* ------------------------- */
@@ -121,7 +121,7 @@
 }
 
 .dropDown {
-  background-color: #00787c;
+  background-color: #005c5f;
   display: none;
   flex-direction: column;
   position: absolute;

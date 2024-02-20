@@ -1,4 +1,4 @@
-export const NavbarLinks = [
+export default [
   {
     id: 1,
     title: "hardware",

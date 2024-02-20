@@ -1,9 +1,10 @@
 .footer-section {
   width: 100vw;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   background-color: #00979d;
   margin-top: 100px;
+
 }
 
 .footer-container {
@@ -12,6 +13,7 @@
   display: flex;
   flex-direction: column;
   color: white;
+
 }
 
 .footer-header {

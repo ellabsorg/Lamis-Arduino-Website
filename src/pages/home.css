@@ -1,0 +1,114 @@
+.home-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.home-container {
+  max-width: 1368px;
+  min-width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+  box-sizing: border-box;
+
+}
+
+.left-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-arduino {
+  width: 100%;
+  color: #008184;
+  background-color: #ecf1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+.what-arduino:hover {
+  color: white;
+  background-color: #7fcbcd;
+}
+
+.what-arduino .title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.what-arduino img {
+  width: 220px;
+}
+
+.main-content {
+  width: 65%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+.banner {
+  width: 340px;
+  height: 410px;
+}
+.banner:hover {
+  filter: brightness(0.9);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.post {
+  width: 340px;
+  height: 410px;
+  color: #00979d;
+  background-color: #ecf1f1;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.post:hover {
+  color: white;
+  background-color: #7fcbcd;
+  filter: brightness(0.9);
+}
+
+.post img {
+  width: 100%;
+  height: 255px;
+}
+
+.post .description {
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+.post .blog {
+  background-color: #00979d;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

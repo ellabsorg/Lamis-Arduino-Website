@@ -1,4 +1,4 @@
-export const FooterLinks = {
+export default {
   "content-left": [
     {
       id: 1,

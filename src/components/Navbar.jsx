@@ -7,7 +7,7 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { NavbarLinks } from "../../constants/NavbarLinks";
+import NavbarLinks from "../constants/NavbarLinks";
 
 function Navbar() {
   console.log({ NavbarLinks });

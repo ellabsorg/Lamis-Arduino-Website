@@ -10,7 +10,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import "./footer.css";
-import { FooterLinks } from "../../constants/FooterLinks.js";
+import FooterLinks from "../constants/FooterLinks.js";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -47,12 +47,16 @@ function Footer() {
       url: "https://www.youtube.com/user/arduinoteam",
     },
   ];
+
   return (
     <div className="footer-section">
       <div className="footer-container">
         <div className="footer-header">
           <div className="footer-header-left">ARDUINO</div>
-          <div className="footer-header-right">
+          <div
+            className="footer-header-right"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <FontAwesomeIcon icon={faChevronUp} size="2xs" />
             Back to top
           </div>

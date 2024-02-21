@@ -2,19 +2,12 @@
   width: 100vw;
   height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #00979d;
   position: fixed;
   top: 0;
   z-index: 1000;
-}
-
-.navbar-container {
-  max-width: 1368px;
-  min-width: 1280px;
-  display: flex;
-  flex-direction: column;
-
 }
 
 .first-level {
@@ -24,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #7fcbcd;
+  padding-right: 10px;
 }
 
 .first-level-left,
@@ -37,6 +31,7 @@
 
 .link {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -50,6 +45,7 @@
 
 .link:hover {
   background-color: #005c5f;
+  white-space: nowrap;
 }
 
 .first-level-left .link {
@@ -69,11 +65,11 @@
   margin-right: 15px;
 }
 
-.first-level-right .search svg {
+.search svg {
   color: white;
 }
 
-.first-level-right .search input {
+.search input {
   background-color: transparent;
   border: none;
   outline: none;
@@ -81,27 +77,30 @@
   width: 200px;
 }
 
-.first-level-right .search input::placeholder {
+.search input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.first-level-right .search:hover {
+.search:hover {
   outline: 1px solid white;
+}
+
+.search:focus-within {
+  outline: 2px solid white;
 }
 
 /* ------------------------- */
 .second-level {
   height: 55px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 0 10px;
+  border-bottom: 1px solid #7fcbcd;
 }
 
 #logo {
   height: 25px;
-  position: absolute;
-  left: 10px;
 }
 
 .links {
@@ -109,7 +108,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 55px;
+  visibility: visible;
+}
+.links .link {
+  height: 55px;
+  position: relative;
 }
 .second-level .link svg {
   transform: rotate(0deg);
@@ -148,4 +152,53 @@
 
 .link:hover .dropDown {
   display: flex;
+}
+
+.menu-icon {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1020px) {
+  .links {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00979d;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    padding-top: 10px;
+    visibility: hidden;
+  }
+
+  .links .link {
+    min-height: 40px;
+    height: auto;
+  }
+  .link:hover {
+    background-color: transparent;
+    color: #c1d602;
+  }
+  .dropDown {
+    background-color: transparent;
+    position: relative;
+    top: 0;
+  }
+  .dropDown .item {
+    border: none;
+    justify-content: center;
+    height: 15px;
+    font-size: 10.5px;
+  }
+  .dropDown .item:hover {
+    color: #c1d602;
+  }
+  .menu-icon {
+    visibility: visible;
+    color: white;
+  }
+  .menu-icon:hover {
+    color: #c1d602;
+  }
 }

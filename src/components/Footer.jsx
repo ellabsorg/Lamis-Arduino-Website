@@ -14,7 +14,6 @@ import FooterLinks from "../constants/FooterLinks.js";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  console.log(FooterLinks);
   const footerIcons = [
     {
       id: 1,

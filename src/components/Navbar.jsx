@@ -13,9 +13,30 @@ import NavbarLinks from "../constants/NavbarLinks";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [scrollDirection, setScrollDirection] = useState("");
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]); 
 
   return (
-    <div className="navbar-section">
+    <div
+      className={
+        scrollDirection === "up"
+          ? "navbar-section"
+          : "navbar-section-collapsed "
+      }
+    >
       <div className="first-level">
         <div className="first-level-left">
           <Link to="/" className="link">
@@ -41,8 +62,12 @@ function Navbar() {
           </Link>
         </div>
       </div>
+
+      {/* ----------------------------------- */}
       <div className="second-level">
-        <img id="logo" src="/img/arduino-logo-white.png" />
+        <Link to="/"  className="link">
+          <img id="logo" src="/img/arduino-logo-white.png" />
+        </Link>
 
         <div
           className="links"

@@ -1,6 +1,6 @@
 .navbar-section {
+  min-height: 100px;
   width: 100vw;
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +8,26 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.35s linear;
+}
+.navbar-section-collapsed {
+  min-height: 55px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #00979d;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transform: translateY(-46px);
+  transition: transform 0.35s linear;
 }
 
 .first-level {
   height: 45px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #7fcbcd;
@@ -95,7 +109,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   border-bottom: 1px solid #7fcbcd;
 }
 
@@ -156,6 +169,8 @@
 
 .menu-icon {
   visibility: hidden;
+  margin-right: 20px;
+  color: white;
 }
 
 @media screen and (max-width: 1020px) {
@@ -196,7 +211,6 @@
   }
   .menu-icon {
     visibility: visible;
-    color: white;
   }
   .menu-icon:hover {
     color: #c1d602;

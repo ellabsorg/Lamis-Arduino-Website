@@ -1,0 +1,148 @@
+.hardware-section {
+  margin-top: 100px;
+  background-color: #ecf1f1;
+}
+
+.hardware-container {
+  max-width: 1368px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
+  margin: auto;
+  gap: 30px;
+}
+
+/* ----------------------------- */
+
+.table-of-content {
+  background-color: #fff;
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  position: sticky;
+  top: 100px;
+}
+.table-of-content ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.table-of-content .title {
+  color: #171e21;
+  background-color: #7fcbcd;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  text-wrap: nowrap;
+}
+
+/* .content-container {
+    width: 100%;
+  } */
+.content-container .content-link {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container .content-link a {
+  color: #008184;
+  font-size: 14px;
+  padding: 10px 0;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ecf1f1;
+}
+
+.content-container .content-link .content-sublink {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+.content-container .content-link .content-sublink a {
+  padding: 10px 0;
+}
+
+/* ----------------------------- */
+.page-content {
+  flex: 2;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 35px;
+  /* box-sizing: border-box; */
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 36px;
+}
+.text {
+  text-align: justify;
+}
+
+hr {
+  margin: 30px 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #dae3e3;
+  padding: 0;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* padding: 10px 20px; */
+}
+
+.content-section .title {
+  font-weight: 400;
+  color: #434f54;
+  text-transform: capitalize;
+}
+
+.content-section .subtitle {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-style: 16px;
+}
+
+table {
+  border: 1px solid #bdc7c7;
+  border-width: 1px 0 0 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+table tr {
+  display: flex;
+  flex-direction: row;
+}
+
+table th,
+table td {
+  border: 1px solid #bdc7c7;
+  border-width: 0 1px 1px 0;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+table th img {
+  max-width: 100%;
+}
+
+table td {
+  background: #f7f9f9;
+  text-transform: capitalize;
+}
+
+.last-version {
+  background: #f7f9f9;
+  padding: 16px 20px;
+  margin-top: 20px;
+}

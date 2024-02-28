@@ -49,11 +49,11 @@
   width: 220px;
 }
 /* ---------- */
-.action-buttons{
+.action-buttons {
   width: 100%;
-display: flex;
-flex-direction: column;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .cta-button::before {
   content: "";
@@ -65,9 +65,8 @@ gap: 20px;
   width: 0;
   z-index: 0;
   transition: all 0.2s ease-in-out;
-
 }
-.cta-button:hover::before{
+.cta-button:hover::before {
   width: 60px;
 }
 .cta-button {
@@ -96,6 +95,49 @@ gap: 20px;
   z-index: 2;
 }
 
+.banners {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: red; */
+  gap: 15px;
+}
+
+.banners a {
+  background-repeat: no-repeat;
+  background-color: #ecf1f1;
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.banners a:hover .title {
+  color: white;
+}
+
+.banners a .title {
+  font-size: 16px;
+  color: #008184;
+  text-align: center;
+}
+
+.banners .cloud {
+  background-image: url(../../public/img/Home/cloud_banner.svg);
+  padding-top: 55%;
+}
+
+.banners a.cloud:hover {
+  background-image: url(../../public/img/Home/cloud_banner_hovered.svg);
+}
+
+.banners .education {
+  background-image: url(../../public/img/Home/education_banner.svg);
+  padding-top: 35%;
+}
+.banners a.education:hover {
+  background-image: url(../../public/img/Home/education_banner_hovered.svg);
+}
 /* -------------------------- */
 
 .main-content {

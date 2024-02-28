@@ -11,6 +11,21 @@ function LeftSide() {
       </Link>
 
       <ActionButtons />
+
+      <div className="banners">
+        <Link to="/" className="cloud">
+          <div className="title">
+            <div>Develop your code in the cloud</div>
+            <div>and build smart IoT projects!</div>
+          </div>
+        </Link>
+        <Link to="/" className="education">
+          <div className="title">
+            <div>Develop your code in the cloud</div>
+            <div>and build smart IoT projects!</div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

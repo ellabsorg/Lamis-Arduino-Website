@@ -59,6 +59,10 @@
   border-bottom: 1px solid #ecf1f1;
 }
 
+.content-container .content-link:last-child a {
+  border: none;
+}
+
 .content-container .content-link .content-sublink {
   padding: 0 25px;
   display: flex;

@@ -1,4 +1,5 @@
-.navbar-section {
+.mini-navbar-section,
+.extra-navbar-section {
   min-height: 100px;
   width: 100vw;
   display: flex;
@@ -10,8 +11,11 @@
   z-index: 1000;
   transform: translateY(0);
   transition: transform 0.35s linear;
+  visibility: hidden;
 }
-.navbar-section-collapsed {
+
+.mini-navbar-section-collapsed,
+.extra-navbar-section-collapsed {
   min-height: 55px;
   width: 100vw;
   display: flex;
@@ -24,6 +28,17 @@
   transform: translateY(-46px);
   transition: transform 0.35s linear;
 }
+
+.mini-navbar-section,
+.mini-navbar-section-collapsed {
+  visibility: hidden;
+}
+.extra-navbar-section,
+.extra-navbar-section-collapsed {
+  visibility: visible;
+}
+
+/* ------------------/ */
 
 .first-level {
   height: 45px;
@@ -124,6 +139,8 @@
   height: 55px;
   visibility: visible;
 }
+
+
 .links .link {
   height: 55px;
   position: relative;
@@ -174,7 +191,18 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .links {
+  .mini-navbar-section,
+  .mini-navbar-section-collapsed {
+    visibility: visible;
+  }
+  .extra-navbar-section,
+  .extra-navbar-section-collapsed {
+    visibility: hidden;
+  }
+
+  /* ------------------/ */
+
+  .links  {
     flex-direction: column;
     justify-content: flex-start;
     width: 100vw;

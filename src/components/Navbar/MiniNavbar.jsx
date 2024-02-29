@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { navbarElements } from "./Navbar";
+import MiniTableOfContents from "../Hardware/TableOfContent/MiniTableOfContents";
+import { scrollToSection } from "../../pages/Hardware";
 
 function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
   return (
@@ -47,19 +49,24 @@ function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
           <img id="logo" src="/img/arduino-logo-white.png" />
         </Link>
 
-        <div
-          className="links mini-navbar-links"
-          style={{ visibility: isOpen ? "visible" : "hidden" }}
-        >
-          {navbarElements()}
-        </div>
         <FontAwesomeIcon
           icon={isOpen ? faClose : faBars}
           size="2xl"
           className="menu-icon"
           onClick={() => setIsOpen(!isOpen)}
         />
+        
+        <div
+          className="links mini-navbar-links"
+          style={{ visibility: isOpen ? "visible" : "hidden" }}
+        >
+          {navbarElements()}
+          <Link to="/" className="link signIn">
+            Sign in
+          </Link>
+        </div>
       </div>
+      <MiniTableOfContents scrollToSection={scrollToSection} />
     </div>
   );
 }

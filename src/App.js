@@ -15,7 +15,7 @@ function App() {
         <Route path="/hardware" element={<Hardware />} />
         <Route path="/software" element={<Software />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

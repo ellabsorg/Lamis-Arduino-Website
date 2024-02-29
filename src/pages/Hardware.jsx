@@ -1,22 +1,24 @@
 import React from "react";
-import TableOfContent from "../components/Hardware/TableOfContent";
 import "./hardware.css";
 import { Link } from "react-router-dom";
-import { tableOfContents } from "../constants/Hardware";
 import ContentSection from "../components/Hardware/ContentSection";
 import { Helmet } from "react-helmet";
-function Hardware() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = element.offsetTop - 100; // Adjusted offset
-      window.scrollTo({
-        top: offset,
-        behavior: "smooth",
-      });
-    }
-  };
+import ExtraTableOfContents from "../components/Hardware/TableOfContent/ExtraTableOfContents";
+import { tableOfContents } from "../constants/Hardware";
+import '../components/Hardware/TableOfContent/tableOfContents.css'
 
+export const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = element.offsetTop - 100; // Adjusted offset
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+  }
+};
+
+function Hardware() {
   return (
     <>
       <Helmet>
@@ -25,7 +27,8 @@ function Hardware() {
       </Helmet>
       <div className="hardware-section">
         <div className="hardware-container">
-          <TableOfContent scrollToSection={scrollToSection} />
+          {/* <MiniTableOfContent scrollToSection={scrollToSection} /> */}
+          <ExtraTableOfContents scrollToSection={scrollToSection} />
           <div className="page-content">
             <h1 className="title">arduino hardware</h1>
             <p>

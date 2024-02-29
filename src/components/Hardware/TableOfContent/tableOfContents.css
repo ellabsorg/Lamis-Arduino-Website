@@ -1,0 +1,108 @@
+.table-of-content {
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  left: 0;
+}
+.mini-table-of-content {
+  display: none;
+  width: 100vw;
+  position: fixed;
+}
+.extra-table-of-content {
+  display: flex;
+  max-width: 250px;
+  height: min-content;
+  position: sticky;
+}
+.table-of-content .title {
+  color: #171e21;
+  background-color: #7fcbcd;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  text-wrap: nowrap;
+  text-align: left;
+}
+.table-of-content .title svg {
+  margin-left: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.table-of-content ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content-container .content-link {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container .content-link a {
+  color: #008184;
+  font-size: 14px;
+  padding: 10px 0;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ecf1f1;
+}
+
+.content-container .content-link:last-child a {
+  border: none;
+}
+
+.content-container .content-link .content-sublink {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+.content-container .content-link .content-sublink a {
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 1020px) {
+  .hardware-section {
+    background-color: white;
+    margin-top: 170px;
+  }
+  .hardware-container {
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .table-of-content {
+    align-items: center;
+    min-height: min-content;
+    max-height: calc(100vh - 100px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .mini-table-of-content {
+    display: flex;
+  }
+  .extra-table-of-content {
+    display: none;
+  }
+  .table-of-content .title {
+    color: #005c5f;
+    background-color: transparent;
+    text-align: center;
+    border-bottom: 1px solid #ecf1f1;
+    width: 100%;
+  }
+
+  .table-of-content ul {
+    width: 250px;
+  }
+  .page-content {
+    padding: 15px;
+  }
+}

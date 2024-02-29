@@ -8,23 +8,27 @@ import MiniNavbar from "./MiniNavbar";
 import ExtraNavbar from "./ExtraNavbar";
 
 export const navbarElements = () => {
-  return NavbarLinks.map((link) => (
-    <Link to={link?.url} className="link" key={link.id}>
-      <div className="link-title">
-        {link.title}
-        {link?.items && <FontAwesomeIcon icon={faCaretDown} />}
-      </div>
-      {link?.items && (
-        <div className="dropDown">
-          {link.items.map((item) => (
-            <Link to={item.url} className="item">
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
-    </Link>
-  ));
+  return (
+    <div className="navbar-elements">
+      {NavbarLinks.map((link) => (
+        <Link to={link?.url} className="link" key={link.id}>
+          <div className="link-title">
+            {link.title}
+            {link?.items && <FontAwesomeIcon icon={faCaretDown} />}
+          </div>
+          {link?.items && (
+            <div className="dropDown">
+              {link.items.map((item) => (
+                <Link to={item.url} className="item">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </Link>
+      ))}
+    </div>
+  );
 };
 
 function Navbar() {
@@ -36,7 +40,7 @@ function Navbar() {
     const currentScrollPos = window.pageYOffset;
     console.log(currentScrollPos);
     setScrollDirection(
-      currentScrollPos < prevScrollPos && currentScrollPos > 100 ? "up" : "down"
+      currentScrollPos < prevScrollPos && currentScrollPos >= 0 ? "up" : "down"
     );
     setPrevScrollPos(currentScrollPos);
   };
@@ -55,11 +59,7 @@ function Navbar() {
         setIsOpen={setIsOpen}
         scrollDirection={scrollDirection}
       />
-      <ExtraNavbar
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        scrollDirection={scrollDirection}
-      />
+      <ExtraNavbar scrollDirection={scrollDirection} />
     </>
   );
 }

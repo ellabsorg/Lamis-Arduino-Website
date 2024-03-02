@@ -1,35 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import NavbarLinks from "../../constants/NavbarLinks";
 import MiniNavbar from "./MiniNavbar";
 import ExtraNavbar from "./ExtraNavbar";
 
-export const navbarElements = () => {
-  return (
-    <div className="navbar-elements">
-      {NavbarLinks.map((link) => (
-        <Link to={link?.url} className="link" key={link.id}>
-          <div className="link-title">
-            {link.title}
-            {link?.items && <FontAwesomeIcon icon={faCaretDown} />}
-          </div>
-          {link?.items && (
-            <div className="dropDown">
-              {link.items.map((item) => (
-                <Link to={item.url} className="item">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          )}
-        </Link>
-      ))}
-    </div>
-  );
-};
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +12,6 @@ function Navbar() {
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    console.log(currentScrollPos);
     setScrollDirection(
       currentScrollPos < prevScrollPos && currentScrollPos >= 0 ? "up" : "down"
     );

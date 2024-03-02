@@ -9,6 +9,8 @@
 .mini-table-of-content {
   display: none;
   width: 100vw;
+  min-height: calc(100vh -100px);
+  max-height: calc(100vh -55px);
   position: fixed;
 }
 .extra-table-of-content {
@@ -80,8 +82,6 @@
 
   .table-of-content {
     align-items: center;
-    min-height: min-content;
-    max-height: calc(100vh - 100px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 
@@ -97,11 +97,17 @@
     text-align: center;
     border-bottom: 1px solid #ecf1f1;
     width: 100%;
+    height: 50px;
+    background-color: #fff;
   }
-
-  .table-of-content ul {
+  .content-container {
+    padding: 10px 0;
     width: 250px;
   }
+  .table-of-content ul {
+    padding: 5px 0;
+  }
+
   .page-content {
     padding: 15px;
   }

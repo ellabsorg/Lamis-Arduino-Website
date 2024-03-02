@@ -7,11 +7,12 @@ import {
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { navbarElements } from "./Navbar";
 import MiniTableOfContents from "../Hardware/TableOfContent/MiniTableOfContents";
 import { scrollToSection } from "../../pages/Hardware";
+import NavbarElements from "./NavbarElements";
 
 function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
+  const pathName = window.location.pathname;
   return (
     <div
       className={
@@ -55,18 +56,20 @@ function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
           className="menu-icon"
           onClick={() => setIsOpen(!isOpen)}
         />
-        
+
         <div
           className="links mini-navbar-links"
           style={{ visibility: isOpen ? "visible" : "hidden" }}
         >
-          {navbarElements()}
+          <NavbarElements setIsOpen={setIsOpen} />
           <Link to="/" className="link signIn">
             Sign in
           </Link>
         </div>
       </div>
-      <MiniTableOfContents scrollToSection={scrollToSection} />
+      {pathName === "/hardware" && (
+        <MiniTableOfContents scrollToSection={scrollToSection} />
+      )}
     </div>
   );
 }

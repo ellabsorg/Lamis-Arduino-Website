@@ -8,7 +8,7 @@ import {
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { navbarElements } from "./Navbar";
+import NavbarElements from "./NavbarElements";
 
 function EstraNavbar({ scrollDirection, isOpen, setIsOpen }) {
   return (
@@ -51,7 +51,9 @@ function EstraNavbar({ scrollDirection, isOpen, setIsOpen }) {
           <img id="logo" src="/img/arduino-logo-white.png" />
         </Link>
 
-        <div className="links  extra-navbar-links">{navbarElements()}</div>
+        <div className="links  extra-navbar-links">
+          <NavbarElements />
+        </div>
 
         <FontAwesomeIcon
           icon={isOpen ? faClose : faBars}

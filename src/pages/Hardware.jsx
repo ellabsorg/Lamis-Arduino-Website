@@ -5,7 +5,7 @@ import ContentSection from "../components/Hardware/ContentSection";
 import { Helmet } from "react-helmet";
 import ExtraTableOfContents from "../components/Hardware/TableOfContent/ExtraTableOfContents";
 import { tableOfContents } from "../constants/Hardware";
-import '../components/Hardware/TableOfContent/tableOfContents.css'
+import "../components/Hardware/TableOfContent/tableOfContents.css";
 
 export const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -27,7 +27,6 @@ function Hardware() {
       </Helmet>
       <div className="hardware-section">
         <div className="hardware-container">
-          {/* <MiniTableOfContent scrollToSection={scrollToSection} /> */}
           <ExtraTableOfContents scrollToSection={scrollToSection} />
           <div className="page-content">
             <h1 className="title">arduino hardware</h1>

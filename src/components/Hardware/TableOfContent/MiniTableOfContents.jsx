@@ -7,7 +7,10 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function MiniTableOfContents({ scrollToSection }) {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className=" table-of-content mini-table-of-content">
+    <div
+      className="table-of-content mini-table-of-content"
+      style={{ maxHeight: toggle ? "calc(100vh - 100px)" : "0px" }}
+    >
       <h5 className="title">
         table of contents
         <FontAwesomeIcon
@@ -17,8 +20,12 @@ function MiniTableOfContents({ scrollToSection }) {
           onClick={() => setToggle(!toggle)}
         />
       </h5>
-      {toggle && (
-        <ul className="content-container">
+
+      <div
+        className="content-container"
+        style={{ overflowY: toggle ? "auto" : "hidden" }}
+      >
+        <ul>
           {tableOfContents.map((item) => (
             <li className="content-link" key={item.id}>
               <Link
@@ -48,7 +55,7 @@ function MiniTableOfContents({ scrollToSection }) {
             </li>
           ))}
         </ul>
-      )}
+      </div>
     </div>
   );
 }

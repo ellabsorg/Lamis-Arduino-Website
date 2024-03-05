@@ -8,12 +8,14 @@ function SoftwareRow({ data }) {
     <div className="software-row">
       <div className="download-desc">
         <div className="download-desc-title-wrapper">
-          <img src={description.icon} alt="Software Icon" />
-          <h1 className="download-desc-title">{description.header}</h1>
+          {downloadOptions && (
+            <img src={description?.icon} alt="Software Icon" />
+          )}
+          <h1 className="download-desc-title">{description?.header}</h1>
         </div>
         <div className="download-desc-text">
-          {description.paragraphs?.map((paragraph) => (
-            <p className="paragraph">
+          {description?.paragraphs?.map((paragraph, index) => (
+            <p className="paragraph" key={index}>
               {paragraph?.map((item) =>
                 item.type === "simple" ? (
                   `${item.text}`
@@ -27,6 +29,7 @@ function SoftwareRow({ data }) {
           ))}
         </div>
       </div>
+
       <div className="download-options">
         <h3 className="download-options-title">download options</h3>
         <div className="download-links-groupe">{downloadOptions?.required}</div>

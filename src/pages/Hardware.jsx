@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ExtraTableOfContents from "../components/Hardware/TableOfContent/DesktopTableOfContents";
-import "../components/Hardware/TableOfContent/tableOfContents.css";
+import DesktopTableOfContents from "../components/TableOfContent/DesktopTableOfContents";
 import "./hardware.css";
 import HardwareMainContent from "../components/Hardware/HardwareMainContent";
+import { HARDWARE_TOC } from "../constants/Hardware";
 
 export const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -28,7 +28,10 @@ function Hardware() {
       </Helmet>
       <div className="hardware-section">
         <div className="hardware-container">
-          <ExtraTableOfContents scrollToSection={scrollToSection} />
+          <DesktopTableOfContents
+            scrollToSection={scrollToSection}
+            tableOfContents={HARDWARE_TOC}
+          />
           <HardwareMainContent />
         </div>
       </div>

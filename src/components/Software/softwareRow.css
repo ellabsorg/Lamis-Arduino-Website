@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   background-color: #ecf1f1;
-  margin: 0 0 20px;
+  margin:  20px 0;
   justify-content: center;
   position: relative;
 }
@@ -38,6 +38,11 @@
 .download-desc-text .paragraph a {
   color: #008184;
   font-weight: 700;
+  margin-inline: 5px;
+}
+.download-desc-text .paragraph a span {
+  font-weight: 400;
+  font-size: 12px;
   margin-left: 5px;
 }
 

@@ -47,7 +47,6 @@ function Footer() {
       url: "https://www.youtube.com/user/arduinoteam",
     },
   ];
-  console.log(FooterLinks.all_links);
 
   return (
     <div className="footer-section">

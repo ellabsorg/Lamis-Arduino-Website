@@ -1,4 +1,51 @@
-export const tableOfContents = [
+export const HARDWARE_TOC = [
+  {
+    id: "kits",
+    title: "kits",
+  },
+  {
+    id: "nano-family",
+    title: "nano family",
+  },
+  {
+    id: "mkr-family",
+    title: "MKR family",
+    children: [
+      {
+        id: "mkr-family-boards",
+        title: "boards",
+      },
+      {
+        id: "mkr-family-shields",
+        title: "shields",
+      },
+    ],
+  },
+  {
+    id: "classic-family",
+    title: "classic family",
+    children: [
+      {
+        id: "classic-family-boards",
+        title: "boards",
+      },
+      {
+        id: "classic-family-shields",
+        title: "shields",
+      },
+    ],
+  },
+  {
+    id: "mega-family",
+    title: "mega family",
+  },
+  {
+    id: "retired",
+    title: "retired",
+  },
+];
+
+export const hardwareMainContent = [
   {
     id: "kits",
     title: "kits",

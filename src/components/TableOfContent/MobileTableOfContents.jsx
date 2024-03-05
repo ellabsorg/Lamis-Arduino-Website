@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { tableOfContents } from "../../../constants/Hardware";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-function MiniTableOfContents({ scrollToSection }) {
+function MiniTableOfContents({ scrollToSection, tableOfContents }) {
   const [toggle, setToggle] = useState(false);
   return (
     <div
@@ -20,7 +19,10 @@ function MiniTableOfContents({ scrollToSection }) {
           onClick={() => setToggle(!toggle)}
         />
       </h5>
-      <div className="content-container" style={{display: toggle? 'block' : 'none'}}>
+      <div
+        className="content-container"
+        style={{ display: toggle ? "block" : "none" }}
+      >
         <ul>
           {tableOfContents.map((item) => (
             <li className="content-link" key={item.id}>

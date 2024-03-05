@@ -9,24 +9,25 @@ function NavbarElements({ setIsOpen }) {
     <div className="navbar-elements">
       {NavbarLinks.map((link) => (
         <Link
-          to={link?.url}
-          className="link"
+          to={link?.path}
           key={link.id}
+          className="link"
           onClick={() => setIsOpen(false)}
         >
           <div className="link-title">
-            {link.title}
-            {link?.items && <FontAwesomeIcon icon={faCaretDown} />}
+            {link.menuItem}
+            {link?.subMenuItems && <FontAwesomeIcon icon={faCaretDown} />}
           </div>
-          {link?.items && (
+          {link?.subMenuItems && (
             <div className="dropDown">
-              {link.items.map((item) => (
+              {link.subMenuItems.map((element) => (
                 <Link
-                  to={item.url}
+                  to={element.path}
                   className="item"
+                  key={element.id}
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.label}
+                  {element.item}
                 </Link>
               ))}
             </div>

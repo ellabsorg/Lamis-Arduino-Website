@@ -10,7 +10,7 @@ function ContentSection({ section }) {
         {section.text?.map((paragraph) => (
           <p>{paragraph}</p>
         ))}
-        {section?.table && <Table table={section.table} />}
+        {section?.table && <Table table={section?.table} />}
         {section?.children &&
           section.children.map((child) => (
             <div id={child.id}>

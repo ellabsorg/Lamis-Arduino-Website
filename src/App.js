@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/hardware" element={<Hardware />} />
         <Route path="/software" element={<Software />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>

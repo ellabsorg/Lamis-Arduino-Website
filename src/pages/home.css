@@ -231,25 +231,21 @@
 }
 
 .post {
-  color: #00979d;
   position: relative;
   transition: all 0.3s;
   font-size: 18px;
 }
 
-.post:hover  {
-  color: white;
-  filter: brightness(0.9);
-}
-.post:hover .description {
-  background-color: #7fcbcd;
-}
+
 
 .post img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+.post:hover img {
+  filter: brightness(0.9);
 }
 
 .post .description {
@@ -258,8 +254,13 @@
   line-height: 1.6;
   padding: 20px;
   background-color: #ecf1f1;
+  color: #00979d;
+  
 }
-
+.post:hover .description {
+  background-color: #7fcbcd;
+  color: white;
+}
 .post .blog {
   background-color: #00979d;
   color: white;
@@ -328,7 +329,8 @@
 }
 
 @media screen and (max-width: 420px) {
-.banner, .post{
-  flex-basis: 100%;
-}
+  .banner,
+  .post {
+    flex-basis: 100%;
+  }
 }

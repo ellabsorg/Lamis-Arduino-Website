@@ -1,7 +1,7 @@
 import React from "react";
 function Table({ table }) {
-  const columns = table.columns;
-  const totalItems = table.content.length;
+  const columns = table?.columns;
+  const totalItems = table?.content?.length;
   const totalTables = Math.ceil(totalItems / columns);
 
   // Generate an array of JSX elements representing tables

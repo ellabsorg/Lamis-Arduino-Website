@@ -1,8 +1,7 @@
 import React from "react";
-import { tableOfContents } from "../../../constants/Hardware";
 import { Link } from "react-router-dom";
 
-function DesktopTableOfContents({ scrollToSection }) {
+function DesktopTableOfContents({ scrollToSection, tableOfContents }) {
   return (
     <div className="table-of-content desktop-table-of-content">
       <h5 className="title">table of contents</h5>

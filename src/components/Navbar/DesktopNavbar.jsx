@@ -15,18 +15,18 @@ function DesktopNavbar({ scrollDirection, isOpen, setIsOpen }) {
       className={
         scrollDirection === "up"
           ? "desktop-navbar-section"
-          : "desktop-navbar-section-collapsed "
+          : "desktop-navbar-section-collapsed"
       }
     >
       <div className="first-level">
         <div className="first-level-left">
-          <Link to="/" className="link">
+          <Link to="/professional" className="link">
             professional
           </Link>
-          <Link to="/" className="link">
+          <Link to="/education" className="link">
             education
           </Link>
-          <Link to="/" className="link">
+          <Link to="/store" className="link">
             store
           </Link>
         </div>
@@ -35,28 +35,27 @@ function DesktopNavbar({ scrollDirection, isOpen, setIsOpen }) {
             <FontAwesomeIcon icon={faSearch} />
             <input placeholder="Search on Arduino.cc" />
           </div>
-          <Link to="/" className="link">
-            <FontAwesomeIcon icon={faCloud} size="2xl" />
+          <Link to="/cloud" className="link">
+            <FontAwesomeIcon icon={faCloud} size="2x" />
           </Link>
-          <Link to="/" className="link">
+          <Link to="/signin" className="link">
             Sign in
           </Link>
         </div>
       </div>
 
-      {/* ------------------"second-level"----------------- */}
       <div className="second-level">
         <Link to="/" className="link">
-          <img id="logo" src="/img/arduino-logo-white.png" />
+          <img id="logo" src="/img/arduino-logo-white.png" alt="Arduino Logo" />
         </Link>
 
-        <div className="links  desktop-navbar-links">
-        <NavbarElements setIsOpen={setIsOpen}/>
+        <div className="links desktop-navbar-links">
+          <NavbarElements setIsOpen={setIsOpen} />
         </div>
 
         <FontAwesomeIcon
           icon={isOpen ? faClose : faBars}
-          size="2xl"
+          size="2x"
           className="menu-icon"
           onClick={() => setIsOpen(!isOpen)}
         />

@@ -12,40 +12,42 @@ import {
 import "./footer.css";
 import FooterLinks from "../constants/FooterLinks.js";
 import { Link } from "react-router-dom";
+import { AllFooterLinks } from "../constants/FooterLinks.js";
 
 function Footer() {
   const footerIcons = [
     {
-      id: 1,
+      id: "facebook",
       icon: faFacebookF,
       url: "https://www.facebook.com/official.arduino",
     },
     {
-      id: 2,
+      id: "instgram",
       icon: faInstagram,
       url: "https://www.instagram.com/arduino.cc/",
     },
     {
-      id: 3,
+      id: "twitter",
       icon: faTwitter,
       url: "https://twitter.com/arduino",
     },
     {
-      id: 4,
+      id: "github",
       icon: faGithub,
       url: "https://github.com/arduino/",
     },
     {
-      id: 5,
+      id: "linkedIn",
       icon: faLinkedin,
       url: "https://www.linkedin.com/company/arduino/",
     },
     {
-      id: 6,
+      id: "youtube",
       icon: faYoutube,
       url: "https://www.youtube.com/user/arduinoteam",
     },
   ];
+  console.log(FooterLinks.all_links);
 
   return (
     <div className="footer-section">
@@ -56,7 +58,7 @@ function Footer() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <FontAwesomeIcon icon={faChevronUp} size="2xs" />
-          Back to top
+          <p>Back to top</p>
         </div>
       </div>
 
@@ -73,22 +75,38 @@ function Footer() {
           ))}
         </div>
         <div className="footer-content-center">
-          <div className="title">newsletter</div>
+          <div className="footer-title">newsletter</div>
           <div className="input-wrapper">
             <input type="email" placeholder="Enter your email to sign up" />
             <button type="submit">Subscribe</button>
           </div>
         </div>
         <div className="footer-content-right">
-          <div className="title">follow us</div>
+          <div className="footer-title">follow us</div>
           <div className="footer-icons">
             {footerIcons.map((item) => (
-              <Link to={item.url} key={item.id} className="footer-icon">
+              <Link
+                to={item.url}
+                key={item.id}
+                id={item.id}
+                className="footer-icon "
+              >
                 <FontAwesomeIcon icon={item.icon} size="md" />
               </Link>
             ))}
           </div>
         </div>
+      </div>
+      <div className="mini-footer-links">
+        {AllFooterLinks.map((item) => (
+          <Link
+            to={item.url}
+            key={item.id}
+            className={`footer-link div${item.id}`}
+          >
+            {item.title}
+          </Link>
+        ))}
       </div>
 
       <div className="footer-bottom">

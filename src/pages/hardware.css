@@ -18,7 +18,6 @@
 .table-of-content {
   background-color: #ffffff;
   flex: 1;
-  display: flex;
   flex-direction: column;
   top: 100px;
   left: 0;

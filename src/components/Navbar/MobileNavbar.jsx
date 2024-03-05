@@ -7,18 +7,18 @@ import {
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import MiniTableOfContents from "../Hardware/TableOfContent/MiniTableOfContents";
+import MobileTableOfContents from "../Hardware/TableOfContent/MobileTableOfContents";
 import { scrollToSection } from "../../pages/Hardware";
 import NavbarElements from "./NavbarElements";
 
-function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
-  const pathName = window.location.pathname;
+function MobileNavbar({ scrollDirection, isOpen, setIsOpen }) {
+  const pathName = window.location?.pathname;
   return (
     <div
       className={
         scrollDirection === "up"
-          ? "mini-navbar-section"
-          : "mini-navbar-section-collapsed "
+          ? "mobile-navbar-section"
+          : "mobile-navbar-section-collapsed "
       }
     >
       <div className="first-level">
@@ -58,7 +58,7 @@ function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
         />
 
         <div
-          className="links mini-navbar-links"
+          className="links mobile-navbar-links"
           style={{ visibility: isOpen ? "visible" : "hidden" }}
         >
           <NavbarElements setIsOpen={setIsOpen} />
@@ -68,10 +68,10 @@ function MiniNavbar({ scrollDirection, isOpen, setIsOpen }) {
         </div>
       </div>
       {pathName === "/hardware" && (
-        <MiniTableOfContents scrollToSection={scrollToSection} />
+        <MobileTableOfContents scrollToSection={scrollToSection} />
       )}
     </div>
   );
 }
 
-export default MiniNavbar;
+export default MobileNavbar;

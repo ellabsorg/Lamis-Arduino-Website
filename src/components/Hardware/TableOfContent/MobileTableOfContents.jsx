@@ -8,7 +8,7 @@ function MiniTableOfContents({ scrollToSection }) {
   const [toggle, setToggle] = useState(false);
   return (
     <div
-      className="table-of-content mini-table-of-content"
+      className="table-of-content mobile-table-of-content"
       style={{ maxHeight: toggle ? "calc(100vh - 100px)" : "0px" }}
     >
       <h5 className="title">
@@ -20,11 +20,7 @@ function MiniTableOfContents({ scrollToSection }) {
           onClick={() => setToggle(!toggle)}
         />
       </h5>
-
-      <div
-        className="content-container"
-        style={{ overflowY: toggle ? "auto" : "hidden" }}
-      >
+      <div className="content-container" style={{display: toggle? 'block' : 'none'}}>
         <ul>
           {tableOfContents.map((item) => (
             <li className="content-link" key={item.id}>

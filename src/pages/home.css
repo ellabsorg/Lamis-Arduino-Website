@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
   padding: 50px;
   box-sizing: border-box;
   margin: auto;
@@ -28,6 +29,7 @@
   background-color: #ecf1f1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 25px;
@@ -72,18 +74,25 @@
 .cta-button {
   width: 100%;
   height: 45px;
-  background-color: red;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+.cta-button .title,
 .cta-button .text {
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
   padding-left: 20px;
+}
+
+.cta-button .title {
+  display: none;
+}
+.cta-button .text {
+  display: block;
 }
 
 .cta-button .icon {
@@ -99,7 +108,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* background-color: red; */
   gap: 15px;
 }
 
@@ -123,6 +131,7 @@
 }
 
 .banners .cloud {
+  transition: background-image 0.15s;
   background-image: url(../../public/img/Home/cloud_banner.svg);
   padding-top: 55%;
 }
@@ -138,21 +147,79 @@
 .banners a.education:hover {
   background-image: url(../../public/img/Home/education_banner_hovered.svg);
 }
+
+/* -------------------------------------- */
+.tail-block {
+  padding-right: 40px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.tail-block-title h1 {
+  font-size: 22px;
+  background-color: #00979d;
+  box-shadow: 10px 0 0 #00979d, -10px 0 0 #00979d;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 0 3px 10px;
+}
+
+.tail-block-text {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.tail-block-text a {
+  color: #008184;
+  font-weight: 400;
+  margin-inline: 5px;
+}
+/* -------------------------------------- */
+
+.social-media-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+}
+.contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: 0.5s;
+  color: #00979d;
+}
+.contact:hover {
+  transform: translateX(10px);
+}
+.contact .icon {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+
 /* -------------------------- */
 
 .main-content {
   flex: 2;
-  width: fit-content;
-  display: grid;
-  justify-content: flex-end;
-  grid-template-columns: auto auto;
-  row-gap: 30px;
-  column-gap: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.banner {
-  width: 340px;
-  height: 410px;
+.banner,
+.post {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: 0 1 45%;
+  margin: 10px;
 }
 .banner:hover {
   filter: brightness(0.9);
@@ -164,29 +231,33 @@
 }
 
 .post {
-  width: 340px;
-  height: 410px;
   color: #00979d;
-  background-color: #ecf1f1;
   position: relative;
   transition: all 0.3s;
+  font-size: 18px;
 }
 
-.post:hover {
+.post:hover  {
   color: white;
-  background-color: #7fcbcd;
   filter: brightness(0.9);
+}
+.post:hover .description {
+  background-color: #7fcbcd;
 }
 
 .post img {
   width: 100%;
-  height: 255px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .post .description {
   font-size: 22px;
   letter-spacing: 2px;
+  line-height: 1.6;
   padding: 20px;
+  background-color: #ecf1f1;
 }
 
 .post .blog {
@@ -201,4 +272,63 @@
   top: 0;
   right: 0;
   z-index: 10;
+}
+
+@media screen and (max-width: 1020px) {
+  .home-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .home-container {
+    max-width: 788px;
+  }
+  .what-arduino {
+    flex-direction: row-reverse;
+  }
+  .what-arduino img {
+    max-width: 150px;
+  }
+  .cta-button::before {
+    display: none;
+  }
+  .action-buttons {
+    flex-direction: row;
+    gap: 0;
+  }
+  .cta-button {
+    padding: 0 10px;
+  }
+  .cta-button .title {
+    display: flex;
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .cta-button .text {
+    display: none;
+  }
+  .cta-button .icon {
+    width: 40px;
+  }
+
+  .banners {
+    display: none;
+  }
+  .tail-block {
+    display: none;
+  }
+  .social-media-contacts {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+.banner, .post{
+  flex-basis: 100%;
+}
 }

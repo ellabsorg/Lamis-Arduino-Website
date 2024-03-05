@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import MiniNavbar from "./MiniNavbar";
-import ExtraNavbar from "./ExtraNavbar";
-
-
+import MobileNavbar from "./MobileNavbar";
+import DesktopNavbar from "./DesktopNavbar";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +25,16 @@ function Navbar() {
 
   return (
     <>
-      <MiniNavbar
+      <MobileNavbar
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         scrollDirection={scrollDirection}
       />
-      <ExtraNavbar scrollDirection={scrollDirection} />
+      <DesktopNavbar
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        scrollDirection={scrollDirection}
+      />
     </>
   );
 }

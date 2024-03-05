@@ -1,0 +1,105 @@
+.software-row {
+  display: flex;
+  flex-direction: row;
+  background-color: #ecf1f1;
+  margin: 0 0 20px;
+  justify-content: center;
+  position: relative;
+}
+
+.software-row .download-desc {
+  flex: 60% 1;
+  padding: 28px;
+}
+.download-desc-title-wrapper {
+  margin: 0 0 16px;
+  display: flex;
+  white-space: nowrap;
+}
+.download-desc-title-wrapper img {
+  width: 72px;
+  margin-right: 28px;
+}
+
+.download-desc-title {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 28px;
+}
+.download-desc-text {
+  display: flex;
+  flex-direction: column;
+}
+.paragraph {
+  margin-top: 8px;
+}
+
+.download-desc-text .paragraph a {
+  color: #008184;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+#source-code {
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ----------------------- */
+
+.download-options {
+  padding: 28px;
+  background-color: #008184;
+  flex: 33% 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+.download-options-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.download-links-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.download-link {
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.download-link .title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  margin-right: 2px;
+}
+
+.release-notes a {
+  font-size: 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .software-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .download-desc-title-wrapper img {
+    width: 56px;
+    margin-right: 16px;
+  }
+}
+/* 
+@media screen and (max-width: 480px) {
+} */

@@ -1,7 +1,7 @@
-.mini-navbar-section,
-.mini-navbar-section-collapsed,
-.extra-navbar-section,
-.extra-navbar-section-collapsed {
+.mobile-navbar-section,
+.mobile-navbar-section-collapsed,
+.desktop-navbar-section,
+.desktop-navbar-section-collapsed {
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -12,24 +12,24 @@
   z-index: 1000;
   transition: transform 0.35s linear;
 }
-.mini-navbar-section,
-.extra-navbar-section {
+.mobile-navbar-section,
+.desktop-navbar-section {
   min-height: 100px;
   transform: translateY(0);
 }
 
-.mini-navbar-section-collapsed,
-.extra-navbar-section-collapsed {
+.mobile-navbar-section-collapsed,
+.desktop-navbar-section-collapsed {
   min-height: 55px;
   transform: translateY(-46px);
 }
 
-.mini-navbar-section,
-.mini-navbar-section-collapsed {
+.mobile-navbar-section,
+.mobile-navbar-section-collapsed {
   display: none;
 }
-.extra-navbar-section,
-.extra-navbar-section-collapsed {
+.desktop-navbar-section,
+.desktop-navbar-section-collapsed {
   display: flex;
 }
 
@@ -193,18 +193,18 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .mini-navbar-section,
-  .mini-navbar-section-collapsed {
+  .mobile-navbar-section,
+  .mobile-navbar-section-collapsed {
     display: flex;
   }
-  .extra-navbar-section,
-  .extra-navbar-section-collapsed {
+  .desktop-navbar-section,
+  .desktop-navbar-section-collapsed {
     display: none;
   }
 
   /* ------------------/ */
 
-  .links.mini-navbar-links {
+  .links.mobile-navbar-links {
     flex-direction: column;
     justify-content: flex-start;
     width: 100vw;
@@ -214,13 +214,12 @@
     right: 0;
     visibility: hidden;
     justify-content: space-between;
-  z-index: 1000;
-
+    z-index: 1000;
   }
-  .mini-navbar-section .links.mini-navbar-links {
+  .mobile-navbar-section .links.mobile-navbar-links {
     min-height: calc(100vh - 100px);
   }
-  .mini-navbar-section-collapsed .links.mini-navbar-links {
+  .mobile-navbar-section-collapsed .links.mobile-navbar-links {
     min-height: calc(100vh - 55px);
   }
   .links .navbar-elements {
@@ -228,9 +227,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
-  .links.mini-navbar-links .link {
+  .links.mobile-navbar-links .link {
     min-height: 40px;
     font-size: 16px;
     padding: 15px 0;

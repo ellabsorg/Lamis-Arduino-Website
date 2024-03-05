@@ -9,6 +9,7 @@ function CallToAction({ data }) {
       className="cta-button"
       style={{ backgroundColor: data.backgroundColor }}
     >
+      <div className="title">{data.title}</div>
       <div className="text">{data.text}</div>
       <div className="icon">
         <FontAwesomeIcon icon={data.icon} size="xl" />

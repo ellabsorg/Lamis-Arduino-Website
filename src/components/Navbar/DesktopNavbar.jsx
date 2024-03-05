@@ -3,20 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
   faCloud,
-  faCaretDown,
   faBars,
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import NavbarElements from "./NavbarElements";
 
-function EstraNavbar({ scrollDirection, isOpen, setIsOpen }) {
+function DesktopNavbar({ scrollDirection, isOpen, setIsOpen }) {
   return (
     <div
       className={
         scrollDirection === "up"
-          ? "extra-navbar-section"
-          : "extra-navbar-section-collapsed "
+          ? "desktop-navbar-section"
+          : "desktop-navbar-section-collapsed "
       }
     >
       <div className="first-level">
@@ -45,14 +44,14 @@ function EstraNavbar({ scrollDirection, isOpen, setIsOpen }) {
         </div>
       </div>
 
-      {/* ----------------------------------- */}
+      {/* ------------------"second-level"----------------- */}
       <div className="second-level">
         <Link to="/" className="link">
           <img id="logo" src="/img/arduino-logo-white.png" />
         </Link>
 
-        <div className="links  extra-navbar-links">
-          <NavbarElements />
+        <div className="links  desktop-navbar-links">
+        <NavbarElements setIsOpen={setIsOpen}/>
         </div>
 
         <FontAwesomeIcon
@@ -66,4 +65,4 @@ function EstraNavbar({ scrollDirection, isOpen, setIsOpen }) {
   );
 }
 
-export default EstraNavbar;
+export default DesktopNavbar;

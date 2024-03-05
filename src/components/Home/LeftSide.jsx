@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ActionButtons from "./ActionButtons";
+import SocialMediaContacts from "./SocialMediaContacts";
+import Home, { HomeDetails } from "../../constants/Home";
 
 function LeftSide() {
   return (
@@ -26,6 +28,27 @@ function LeftSide() {
           </div>
         </Link>
       </div>
+      {HomeDetails.map((detail) => (
+        <div className="tail-block">
+          <div className="tail-block-title">
+            {detail.title.map((title) => (
+              <h1>{title}</h1>
+            ))}
+          </div>
+          <div className="tail-block-text">
+            {detail.paragraphs.map((paragraph) =>
+              paragraph.type === "simple" ? (
+                `${paragraph.text}`
+              ) : (
+                <a href={paragraph.href} target="_blank">
+                  {paragraph.text}
+                </a>
+              )
+            )}
+          </div>
+        </div>
+      ))}
+      <SocialMediaContacts />
     </div>
   );
 }

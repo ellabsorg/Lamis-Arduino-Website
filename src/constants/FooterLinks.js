@@ -1,4 +1,4 @@
-export default {
+const FooterLinks = {
   "content-left": [
     {
       id: 1,
@@ -34,24 +34,30 @@ export default {
 
   bottom: [
     {
-      id: 1,
+      id: 7,
       title: "Terms Of Service",
       url: "/",
     },
     {
-      id: 2,
+      id: 8,
       title: "Privacy Policy",
       url: "/",
     },
     {
-      id: 3,
+      id: 9,
       title: "Security",
       url: "/",
     },
     {
-      id: 4,
+      id: 10,
       title: "Cookie Settings",
       url: "/",
     },
   ],
 };
+export default FooterLinks;
+
+export const AllFooterLinks = [
+  ...FooterLinks["content-left"],
+  ...FooterLinks["bottom"],
+];

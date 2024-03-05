@@ -2,9 +2,9 @@ import React from "react";
 import { tableOfContents } from "../../../constants/Hardware";
 import { Link } from "react-router-dom";
 
-function ExtraTableOfContents({ scrollToSection }) {
+function DesktopTableOfContents({ scrollToSection }) {
   return (
-    <div className="table-of-content extra-table-of-content">
+    <div className="table-of-content desktop-table-of-content">
       <h5 className="title">table of contents</h5>
       <div className="content-container">
         <ul>
@@ -33,4 +33,4 @@ function ExtraTableOfContents({ scrollToSection }) {
   );
 }
 
-export default ExtraTableOfContents;
+export default DesktopTableOfContents;

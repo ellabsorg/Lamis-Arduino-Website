@@ -1,7 +1,7 @@
 import React from "react";
-import Table from "./Table";
+import ColumnsTable from "./ColumnsTable";
 
-function ContentSection({ section }) {
+function HardwareContentSection({ section }) {
   return (
     <>
       <hr />
@@ -10,12 +10,12 @@ function ContentSection({ section }) {
         {section.text?.map((paragraph) => (
           <p>{paragraph}</p>
         ))}
-        {section?.table && <Table table={section?.table} />}
+        {section?.table && <ColumnsTable table={section?.table} />}
         {section?.children &&
           section.children.map((child) => (
             <div id={child.id}>
               <h3 className="subtitle">{child.title}</h3>
-              <Table table={child.table} />
+              <ColumnsTable table={child.table} />
             </div>
           ))}
       </div>
@@ -23,4 +23,4 @@ function ContentSection({ section }) {
   );
 }
 
-export default ContentSection;
+export default HardwareContentSection;

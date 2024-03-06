@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ContentSection from "./ContentSection";
 import { hardwareMainContent } from "../../constants/Hardware";
+import HardwareContentSection from "./HardwareContentSection";
 
 function HardwareMainContent() {
   return (
@@ -22,7 +22,7 @@ function HardwareMainContent() {
         <img src="img/Hardware/educational-kits.jpg" alt="" />
       </Link>
       {hardwareMainContent.map((section) => (
-        <ContentSection section={section} />
+        <HardwareContentSection section={section} />
       ))}
       <p className="last-version">Last revision April 11, 2022, at 11:16 PM</p>
     </div>

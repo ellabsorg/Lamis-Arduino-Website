@@ -1,5 +1,8 @@
 import React from "react";
-function Table({ table }) {
+import "./columnsTable.css";
+
+
+function ColumnsTable({ table }) {
   const columns = table?.columns;
   const totalItems = table?.content?.length;
   const totalTables = Math.ceil(totalItems / columns);
@@ -20,7 +23,7 @@ const generateTable = (index, table, columns, totalItems) => {
   const tableItems = table.content.slice(startIndex, endIndex);
 
   return (
-    <table key={index}>
+    <table key={index} className="columns-table">
       <thead>
         <tr>
           {tableItems.map((tableItem) => (
@@ -41,4 +44,4 @@ const generateTable = (index, table, columns, totalItems) => {
   );
 };
 
-export default Table;
+export default ColumnsTable;

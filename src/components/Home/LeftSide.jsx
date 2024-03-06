@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ActionButtons from "./ActionButtons";
 import SocialMediaContacts from "./SocialMediaContacts";
-import Home, { HomeDetails } from "../../constants/Home";
+import { HomeDetails } from "../../constants/Home";
 
 function LeftSide() {
   return (

@@ -69,34 +69,7 @@ hr {
   font-style: 16px;
 }
 
-table {
-  border: 1px solid #bdc7c7;
-  border-width: 1px 0 0 1px;
-  display: flex;
-  flex-direction: column;
-}
 
-table tr {
-  display: flex;
-  flex-direction: row;
-}
-
-table th,
-table td {
-  border: 1px solid #bdc7c7;
-  border-width: 0 1px 1px 0;
-  padding: 8px 12px;
-  width: 100%;
-}
-
-table th img {
-  max-width: 100%;
-}
-
-table td {
-  background: #f7f9f9;
-  text-transform: capitalize;
-}
 
 .last-version {
   background: #f7f9f9;
